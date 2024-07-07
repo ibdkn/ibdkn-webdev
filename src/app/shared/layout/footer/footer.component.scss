@@ -1,0 +1,35 @@
+@import "../../../../styles/variables";
+
+.footer {
+  padding: 15px 0;
+  background-color: $primary-bg;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  //.navigation {
+  //  &__list {
+  //    display: grid;
+  //    grid-template-columns: repeat(2, 1fr);
+  //    grid-template-rows: repeat(2, 1fr);
+  //    gap: 20px;
+  //  }
+  //}
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__rights {
+    display: none;
+    font-size: 13px;
+    text-align: center;
+    color: $secondary-font-color;
+    opacity: .4;
+  }
+}
