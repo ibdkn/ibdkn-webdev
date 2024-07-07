@@ -8,11 +8,19 @@
   z-index: 999;
 
   padding: 15px 0;
-  background-color: $primary-bg;
+  background-color: rgba(12, 12, 12, 0.6);
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .action {
+      display: none;
+    }
   }
 }

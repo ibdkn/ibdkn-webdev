@@ -4,6 +4,7 @@ import {RouterOutlet} from "@angular/router";
 import {FooterComponent} from "./footer/footer.component";
 import {MainComponent} from "../../views/main/main.component";
 import {SocialsComponent} from "../../views/pages/socials/socials.component";
+import {QuoteComponent} from "../../views/pages/quote/quote.component";
 
 @Component({
   selector: 'app-layout',
@@ -13,7 +14,8 @@ import {SocialsComponent} from "../../views/pages/socials/socials.component";
     RouterOutlet,
     FooterComponent,
     MainComponent,
-    SocialsComponent
+    SocialsComponent,
+    QuoteComponent
   ],
   templateUrl: './layout.component.html',
 })
