@@ -95,7 +95,7 @@
   &__image {
     position: absolute;
     right: 0;
-    bottom: -310px;
+    bottom: -300px;
   }
 }
 
@@ -113,7 +113,7 @@
     height: auto;
 
     &__title {
-      font-size: 55px;
+      font-size: 75px;
       gap: 8px;
 
       span:nth-child(2) {
@@ -122,7 +122,7 @@
     }
 
     &__image {
-      bottom: -410px;
+      bottom: -360px;
     }
   }
 }
@@ -130,8 +130,17 @@
 @media screen and (max-width: 1023px) {
   .main {
     .wrapper {
-      max-width: 690px;
+      max-width: 800px;
       margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 58px;
+      gap: 5px;
+
+      span:nth-child(2) {
+        line-height: 125%;
+      }
     }
 
     &__image {
@@ -146,6 +155,8 @@
 
 @media screen and (max-width: 768px) {
   .main {
+    padding-top: 100px;
+
     &__title {
       font-size: 50px;
     }
