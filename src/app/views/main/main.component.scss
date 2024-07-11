@@ -45,7 +45,7 @@
   &__action {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 
     .button {
       padding: 20px 50px;
@@ -53,42 +53,68 @@
   }
 
   .cv {
+    max-width: max-content;
     display: flex;
     align-items: center;
-    gap: 10px;
-    cursor: default;
+    position: relative;
+    padding: 20px 22px;
+    transition: all .2s ease;
 
-    &__circles {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      border-radius: 28px;
+      background: rgba($primary-accent, .5);
+      width: 59px;
+      height: 59px;
+      transition: all .3s ease;
+    }
+
+    span {
       position: relative;
-      display: flex;
+      font-family: $primary-font-family;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      color: white;
+    }
+
+    svg {
+      position: relative;
+      top: 0;
+      margin-left: 10px;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: $secondary-font-color;
+      stroke-width: 2;
+      transform: translateX(-5px);
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      color: $primary-font-color;
+
+      &:before {
+        width: 100%;
+        background: rgba($secondary-accent, 1);
+      }
+      svg {
+        stroke: $primary-font-color;
+        transform: translateX(0);
+      }
 
       span {
-        display: block;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-
-        &:nth-child(1) {
-          transform: translateX(15px);
-          transition: .5s linear;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: $secondary-accent;
-        }
-
-        &:nth-child(2) {
-          background-color: transparent;
-          border: 1px solid $secondary-font-color;
-        }
+        color: $primary-font-color;
       }
+    }
 
-      &:hover span:nth-child(1) {
-        transform: translateX(50px);
-        transition: .5s linear;
-        cursor: pointer;
-      }
+    &:active {
+      transform: scale(.96);
     }
   }
 
@@ -175,36 +201,23 @@
     }
 
     .cv {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: default;
+      border-radius: 28px;
+      background: $secondary-accent;
 
-      &__circles {
-        position: relative;
-        display: flex;
+      span {
+        color: $primary-font-color;
+      }
 
-        span {
-          display: block;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
+      svg {
+        stroke: $primary-font-color;
+      }
 
-          &:nth-child(1) {
-            transform: none;
-          }
-
-          &:nth-child(2) {
-            display: none;
-          }
-        }
-
-        &:hover span:nth-child(1) {
-          transform: none;
-        }
+      &:before {
+        display: none;
       }
     }
   }
 }
+
 
 
